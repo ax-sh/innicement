@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import React from "react";
 import "./App.scss";
 import { SubHeading } from "./components";
 import Layout from "./components/Layout";
@@ -44,6 +45,18 @@ function Hero() {
   );
 }
 
+function Summary({
+  title,
+  children,
+}: React.ComponentPropsWithoutRef<"details">) {
+  return (
+    <details className="">
+      <summary className="cursor-pointer text-3xl">{title}</summary>
+      {children}
+    </details>
+  );
+}
+
 function Info() {
   return (
     <section id="info" className="min-h-screen grid grid-cols-12 gap-8">
@@ -52,23 +65,15 @@ function Info() {
       </div>
       <div className="col-span-6">
         <SubHeading>Everything you need to invest the way you want</SubHeading>
-        <details>
-          <summary>Investing ideas</summary>
+        <Summary title="Investing ideas">
           <p>
             Innicement has the guidance and tools to confidently pursue your
             investing goals and build your portfolio.
           </p>
-        </details>
-
-        <details>
-          <summary>$0 trades</summary>
-        </details>
-        <details>
-          <summary>More rewards</summary>
-        </details>
-        <details>
-          <summary>Investing & connected</summary>
-        </details>
+        </Summary>
+        <Summary title="$0 trades">lorem</Summary>
+        <Summary title="More rewards">lorem</Summary>
+        <Summary title="Investing & connected">lorem</Summary>
       </div>
       <div className="col-span-3"></div>
     </section>
@@ -85,7 +90,7 @@ function Pricing() {
 
 function App() {
   return (
-    <Layout className="container">
+    <Layout className="container flex flex-col gap-10">
       <Hero />
       <Info />
       <Pricing />
@@ -102,7 +107,7 @@ function App() {
             Innicement time-tested philosophy delivered on a modern, all-digital
             platform that can evolve with your needs.
           </p>
-          <NavButton>Learn More</NavButton>{" "}
+          <NavButton>Learn More</NavButton>
         </div>
       </section>
       <section className="min-h-screen">
