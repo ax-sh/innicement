@@ -4,40 +4,13 @@ import "./App.scss";
 import { SubHeading } from "./components";
 import Layout from "./components/Layout";
 import { GetStartedButton, NavButton } from "./components/Nav";
-
-function Hero() {
-	return (
-		<section id="hero" className="grid grid min-h-[80vh] grid-cols-1 md:grid-cols-12">
-			<div className={clsx("col-span-6", "flex flex-col gap-8 justify-evenly items-start")}>
-				<img className="h-[20%]" src={"/get_upto_80k.svg"} />
-				<h1 className="hero-title *header-1">Do more with investments on your own terms</h1>
-				<GetStartedButton className="border-0 w-full md:w-1/3 " />
-			</div>
-			<div className={clsx("col-span-6", "grid grid-cols-2 grid-rows-1", "gap-8")}>
-				<div className="flex flex-col col-span-1 gap-12">
-					<img className="flex-grow" src="http://source.unsplash.com/random" />
-					<p>
-						Get helpful investing ideas and a cash bonus when you invest in a new account with
-						Innicement
-					</p>
-				</div>
-				<div className="flex flex-col">
-					<p className="bg-black">
-						Get helpful investing ideas and a cash bonus when you invest in a new account with
-						Innicement
-					</p>
-					<img className="flex-grow" src="http://source.unsplash.com/random" />
-				</div>
-			</div>
-		</section>
-	);
-}
+import Hero from "./container/Hero";
 
 function Summary({ title, children }: React.ComponentPropsWithoutRef<"details">) {
 	return (
 		<details className="">
 			<summary className="cursor-pointer text-3xl">{title}</summary>
-			{children}
+			<div className="flex justify-end text-right children:w-6/12">{children}</div>
 		</details>
 	);
 }
