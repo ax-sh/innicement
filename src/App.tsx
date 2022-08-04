@@ -21,7 +21,7 @@ function Hero() {
         <h1 className="hero-title *header-1">
           Do more with investments on your own terms
         </h1>
-        <GetStartedButton className="border-0" />
+        <GetStartedButton className="border-0 w-full md:w-1/3 " />
       </div>
       <div
         className={clsx("col-span-6", "grid grid-cols-2 grid-rows-1", "gap-8")}

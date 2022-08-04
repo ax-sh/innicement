@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import React from "react";
-import { List, Logo, LogoWithText, navItems } from "..";
+import { List, LogoWithText, navItems } from "..";
 
 export function NavButton({
   className,
