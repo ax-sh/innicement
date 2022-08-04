@@ -38,13 +38,46 @@ function Info() {
 	);
 }
 
+function PricingItem({
+	title,
+	children,
+	premium,
+}: React.ComponentPropsWithoutRef<"div"> & { premium?: boolean }) {
+	return (
+		<div className={clsx(premium && "i-bg-gray premium-price")}>
+			<h4 className="text-2xl border-3 border-black px-1 py-2">{title}</h4>
+			<div className="px-4 py-8">
+				<p>
+					Personalized investing with insights, guidance and tools to confidently put your investing
+					ideas into action
+				</p>
+				<h3 className="price text-6xl bg-igreen my-8">$350</h3>
+				<span className="bg-blue">/ Minimum Investment</span>
+				<NavButton>Try It For Free</NavButton>
+			</div>
+		</div>
+	);
+}
+
+function PricingWrapper() {
+	return (
+		<div className="flex gap-8">
+			<PricingItem title="Innicement - Self‑Directed" />
+			<PricingItem title="Innicement - Guided Investing" premium />
+			<PricingItem title="Innicement - Guided Investing" />
+		</div>
+	);
+}
+
 function Pricing() {
 	return (
-		<section id="pricing" className="min-h-screen">
-			<div>
+		<section id="pricing" className="min-h-screen  bg-light-600 p-8">
+			<div className="flex justify-between">
 				<SubHeading>Invest your way</SubHeading>
+				<div className="h-4 bg-black" />
 				<NavButton>See Details</NavButton>
 			</div>
+			<PricingWrapper />
 		</section>
 	);
 }
