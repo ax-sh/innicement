@@ -1,4 +1,4 @@
-import { ReactFragment } from "react";
+import Footer from "../Footer";
 import Nav from "../Nav";
 
 export default function Layout({
@@ -9,7 +9,7 @@ export default function Layout({
     <>
       <Nav />
       <main {...props}>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

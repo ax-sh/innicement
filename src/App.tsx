@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 
 function App() {
   return (
-    <Layout>
+    <Layout className="container">
       <section id="hero">Do more with investments on your own terms</section>
       <section id="info">
         Everything you need to invest the way you want

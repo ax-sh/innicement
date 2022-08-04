@@ -10,7 +10,7 @@ export function range(size: number, startAt = 1) {
 export function Logo({ children }: React.ComponentPropsWithoutRef<"figure">) {
   return (
     <figure>
-      LOGO
+      <img src="/Innicement.svg" />
       {children && <caption>{children}</caption>}
     </figure>
   );
