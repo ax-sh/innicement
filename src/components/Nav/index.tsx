@@ -1,0 +1,71 @@
+import { clsx } from "clsx";
+import React from "react";
+import { List, LogoWithText, navItems } from "..";
+
+export function NavButton({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithoutRef<"button">) {
+  return (
+    <button
+      className={clsx(className, "border border-black p-4 px-6")}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+export function GetStartedButton({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"button">) {
+  return (
+    <NavButton
+      className={clsx("bg-[#2F5EBF] text-white", className)}
+      {...props}
+    >
+      <strong>Get Started</strong>
+    </NavButton>
+  );
+}
+
+function AuthButtonWrapper() {
+  return (
+    <div className="flex gap-4">
+      <NavButton>Log In</NavButton>
+      <GetStartedButton />
+    </div>
+  );
+}
+
+export default function Nav() {
+  return (
+    <nav
+      className={clsx(
+        "container",
+        "flex md:flex-row flex-col",
+        "gap-2",
+        "py-10",
+        "justify-between items-center"
+      )}
+    >
+      <LogoWithText />
+      <List
+        className={clsx(
+          "flex",
+          //  "flex-grow justify-evenly",
+          "gap-2"
+        )}
+      >
+        {navItems.map((i, index) => (
+          <a className="cursor-pointer" key={index}>
+            {i}
+          </a>
+        ))}
+      </List>
+      <AuthButtonWrapper />
+    </nav>
+  );
+}
