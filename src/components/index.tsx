@@ -3,6 +3,10 @@ import React from "react";
 
 export const navItems = ["Home", "About", "Investment", "Services", "News"];
 
+export function SubHeading({ children }: React.ComponentPropsWithoutRef<"h2">) {
+  return <h2 className={clsx("*header-2")}>{children}</h2>;
+}
+
 export function range(size: number, startAt = 1) {
   return Array.from(Array(size).keys()).map((i) => i + startAt);
 }
@@ -18,7 +22,7 @@ export function Logo({
       {...props}
     >
       <img src="/Innicement.svg" className="h-full" />
-      {children && <caption>{children}</caption>}
+      {children && <figcaption>{children}</figcaption>}
     </figure>
   );
 }

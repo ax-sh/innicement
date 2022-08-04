@@ -1,13 +1,41 @@
 import { clsx } from "clsx";
+import React from "react";
 import { List, Logo, LogoWithText, navItems } from "..";
+
+export function NavButton({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithoutRef<"button">) {
+  return (
+    <button
+      className={clsx(className, "border border-black p-4 px-6")}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+export function GetStartedButton({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"button">) {
+  return (
+    <NavButton
+      className={clsx("bg-[#2F5EBF] text-white", className)}
+      {...props}
+    >
+      <strong>Get Started</strong>
+    </NavButton>
+  );
+}
 
 function AuthButtonWrapper() {
   return (
     <div className="flex gap-4">
-      <button className="border border-black p-4  px-6 ">Log In</button>
-      <button className="border border-black py-4 px-6 bg-[#2F5EBF] text-white">
-        <strong>Get Started</strong>
-      </button>
+      <NavButton>Log In</NavButton>
+      <GetStartedButton />
     </div>
   );
 }
