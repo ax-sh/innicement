@@ -46,7 +46,7 @@ function ComparisonProgress({
 	cost: string;
 }) {
 	return (
-		<div className="border-3 text-white w-full">
+		<div className="ComparisonProgress border-3 text-white w-full">
 			<div
 				className={clsx(
 					width,
@@ -54,7 +54,7 @@ function ComparisonProgress({
 				)}
 			>
 				<span className="text-3xl">{label}</span>
-				<img className="flex-grow h-10 object-stretch" src="/compare_progress_arrow.svg" />
+				<img className="flex-grow h-10 object-stretch" src="compare_progress_arrow.svg" />
 				<span className="text-green text-3xl">{cost}</span>
 			</div>
 		</div>
@@ -66,7 +66,7 @@ function Comparison() {
 		<section className="flex flex-col gap-10">
 			<div className="grid grid-cols-1 md:grid-cols-2">
 				<SubHeading>Lower costs can add up to big savings</SubHeading>
-				<img src="/lower_cost.svg" />
+				<img src="lower_cost.svg" />
 			</div>
 			<div className="flex flex-col gap-5 overflow-hidden">
 				<ComparisonProgress label={"Innicement"} width={"w-8/12"} cost={"$87,980"} />

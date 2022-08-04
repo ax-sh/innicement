@@ -14,7 +14,7 @@ export function range(size: number, startAt = 1) {
 export function Logo({ children, className, ...props }: React.ComponentPropsWithoutRef<"figure">) {
 	return (
 		<figure className={clsx(className, "flex justify-center items-center")} {...props}>
-			<img src="/Innicement.svg" className="h-full" />
+			<img src="Innicement.svg" className="h-full" />
 			{children && <figcaption>{children}</figcaption>}
 		</figure>
 	);

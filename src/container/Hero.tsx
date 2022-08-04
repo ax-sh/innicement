@@ -5,7 +5,7 @@ export default function Hero() {
 	return (
 		<section id="hero" className="grid grid min-h-[80vh] grid-cols-1 md:grid-cols-12">
 			<div className={clsx("col-span-6", "flex flex-col gap-8 justify-evenly items-start")}>
-				<img className="h-[20%]" src={"/get_upto_80k.svg"} />
+				<img className="h-[20%]" src={"get_upto_80k.svg"} />
 				<h1 className="hero-title *header-1">Do more with investments on your own terms</h1>
 				<GetStartedButton className="border-0 w-full md:w-1/3 " />
 			</div>
