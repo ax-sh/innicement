@@ -18,10 +18,7 @@ export default function Hero() {
 					</p>
 				</div>
 				<div className="flex flex-col">
-					<p className="bg-black">
-						Get helpful investing ideas and a cash bonus when you invest in a new account with
-						Innicement
-					</p>
+					<div className="h-20 bg-black" />
 					<img className="flex-grow object-cover" src="http://source.unsplash.com/random" />
 				</div>
 			</div>

@@ -14,19 +14,24 @@ function Info() {
 			<div className="col-span-3">
 				<img src="http://source.unsplash.com/random" />
 			</div>
-			<div className="col-span-6">
+			<div className="col-span-full md:col-span-6 flex flex-col gap-4">
 				<SubHeading>Everything you need to invest the way you want</SubHeading>
-				<Summary title="Investing ideas">
-					<p>
-						Innicement has the guidance and tools to confidently pursue your investing goals and
-						build your portfolio.
-					</p>
-				</Summary>
-				<Summary title="$0 trades">lorem</Summary>
-				<Summary title="More rewards">lorem</Summary>
-				<Summary title="Investing & connected">lorem</Summary>
+				<div>
+					<Summary title="Investing ideas">
+						<p>
+							Innicement has the guidance and tools to confidently pursue your investing goals and
+							build your portfolio.
+						</p>
+					</Summary>
+					<Summary title="$0 trades">lorem</Summary>
+					<Summary title="More rewards">lorem</Summary>
+					<Summary title="Investing & connected">lorem</Summary>
+				</div>
 			</div>
-			<div className="col-span-3"></div>
+			<div className="col-span-3 flex flex-col overflow-hidden">
+				<img src="http://source.unsplash.com/random" />
+				<img src="http://source.unsplash.com/random" />
+			</div>
 		</section>
 	);
 }
@@ -58,7 +63,7 @@ function ComparisonProgress({
 
 function Comparison() {
 	return (
-		<section className="min-h-screen flex flex-col gap-10">
+		<section className="flex flex-col gap-10">
 			<div className="grid grid-cols-1 md:grid-cols-2">
 				<SubHeading>Lower costs can add up to big savings</SubHeading>
 				<img src="/lower_cost.svg" />
@@ -79,7 +84,7 @@ function App() {
 			<Pricing />
 			<Comparison />
 
-			<section className="min-h-screen grid grid-cols-2 gap-4">
+			<section className=" grid grid-cols-2 gap-4">
 				<div className="grid grid-cols-2 gap-4">
 					<img src="http://source.unsplash.com/random" />
 					<img src="http://source.unsplash.com/random" />
@@ -95,7 +100,7 @@ function App() {
 					<NavButton>Learn More</NavButton>
 				</div>
 			</section>
-			<section className="min-h-screen">
+			<section className="">
 				<div className="w-1/2 flex flex-col gap-5">
 					<SubHeading>Preferred Rewards</SubHeading>
 					<p>
@@ -105,7 +110,7 @@ function App() {
 					</p>
 					<NavButton>Learn More</NavButton>
 				</div>
-				<Circles />
+				{/* <Circles /> */}
 			</section>
 			<section className="get-started grid place-items-center">
 				<div className="flex flex-col gap-10 items-start p-20">
