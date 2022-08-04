@@ -45,7 +45,7 @@ export default function Nav() {
     <nav
       className={clsx(
         "container",
-        "flex",
+        "flex md:flex-row flex-col",
         "gap-2",
         "py-10",
         "justify-between items-center"
