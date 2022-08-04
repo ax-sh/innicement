@@ -1,19 +1,11 @@
 import clsx from "clsx";
 import React from "react";
 import "./App.scss";
-import { SubHeading } from "./components";
+import { SubHeading, Summary } from "./components";
 import Layout from "./components/Layout";
 import { GetStartedButton, NavButton } from "./components/Nav";
 import Hero from "./container/Hero";
-
-function Summary({ title, children }: React.ComponentPropsWithoutRef<"details">) {
-	return (
-		<details className="">
-			<summary className="cursor-pointer text-3xl">{title}</summary>
-			<div className="flex justify-end text-right children:w-6/12">{children}</div>
-		</details>
-	);
-}
+import Pricing from "./container/Pricing";
 
 function Info() {
 	return (
@@ -34,50 +26,6 @@ function Info() {
 				<Summary title="Investing & connected">lorem</Summary>
 			</div>
 			<div className="col-span-3"></div>
-		</section>
-	);
-}
-
-function PricingItem({
-	title,
-	children,
-	premium,
-}: React.ComponentPropsWithoutRef<"div"> & { premium?: boolean }) {
-	return (
-		<div className={clsx(premium && "i-bg-gray premium-price")}>
-			<h4 className="price-label text-2xl border-3 border-black px-1 py-2">{title}</h4>
-			<div className="px-4 py-8">
-				<p>
-					Personalized investing with insights, guidance and tools to confidently put your investing
-					ideas into action
-				</p>
-				<h3 className="price text-6xl bg-aaa my-8">$350</h3>
-				<span className="bg-blue">/ Minimum Investment</span>
-				<NavButton>Try It For Free</NavButton>
-			</div>
-		</div>
-	);
-}
-
-function PricingWrapper() {
-	return (
-		<div className="flex gap-8">
-			<PricingItem title="Innicement - Self‑Directed" />
-			<PricingItem title="Innicement - Guided Investing" premium />
-			<PricingItem title="Innicement - Guided Investing" />
-		</div>
-	);
-}
-
-function Pricing() {
-	return (
-		<section id="pricing" className="min-h-screen bg-light-600 p-8 flex flex-col gap-8">
-			<div className="flex justify-between items-center gap-8">
-				<SubHeading>Invest your way</SubHeading>
-				<div className="h-1 flex-grow bg-black " />
-				<NavButton>See Details</NavButton>
-			</div>
-			<PricingWrapper />
 		</section>
 	);
 }
