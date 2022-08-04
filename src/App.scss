@@ -33,3 +33,19 @@
 		display: inline-block;
 	}
 }
+
+.get-started {
+	h6 {
+		display: flex;
+		&:after {
+			content: "";
+			display: inline-block;
+			height: 3rem;
+			width: 3rem;
+			margin-bottom: -3rem;
+			translate: -1rem 1rem;
+			background-image: url("/get_started_highlight.svg");
+			background-size: cover;
+		}
+	}
+}
