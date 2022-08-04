@@ -4,6 +4,7 @@ import "./App.scss";
 import { SubHeading, Summary } from "./components";
 import Layout from "./components/Layout";
 import { GetStartedButton, NavButton } from "./components/Nav";
+import Circles from "./container/Circles";
 import Hero from "./container/Hero";
 import Pricing from "./container/Pricing";
 
@@ -70,35 +71,6 @@ function Comparison() {
 	);
 }
 
-function Circle({
-	children,
-	className,
-	rotate,
-	...props
-}: React.ComponentPropsWithoutRef<"div"> & { rotate?: number }) {
-	return (
-		<div
-			className={clsx(className, "solar rounded-full border-2 border-black h-full w-full p-9")}
-			style={{ transform: `rotateX(${rotate}deg)` }}
-			{...props}
-		>
-			{children}
-		</div>
-	);
-}
-
-function Circles() {
-	return (
-		<div className="w-[60vh] h-[60vh] flex justify-center m-auto" style={{ perspective: "50rem" }}>
-			<Circle rotate={70}>
-				<Circle>
-					<Circle rotate={0}></Circle>
-				</Circle>
-			</Circle>
-		</div>
-	);
-}
-
 function App() {
 	return (
 		<Layout className="container flex flex-col gap-10">
@@ -135,8 +107,15 @@ function App() {
 				</div>
 				<Circles />
 			</section>
-			<section className="get-started min-h-screen">
-				<SubHeading>Get up to when you invest in Innicement</SubHeading>
+			<section className="get-started grid place-items-center">
+				<div className="flex flex-col gap-10 items-start p-20">
+					<SubHeading>
+						<div>Get up </div>
+						<div>to when you invest in</div>
+						<div>Innicement</div>
+					</SubHeading>
+					<GetStartedButton />
+				</div>
 			</section>
 		</Layout>
 	);
