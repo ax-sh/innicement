@@ -30,15 +30,49 @@ function Info() {
 	);
 }
 
+function ComparisonProgress({
+	label,
+	width,
+	cost,
+}: {
+	width: string;
+	label: string;
+	cost: string;
+}) {
+	return (
+		<div className="border-3 text-white">
+			<div className={clsx(width, "flex justify-between items-center bg-black gap-8 p-2")}>
+				<span className="text-3xl">{label}</span>
+				<img className="flex-grow h-10 object-stretch" src="/compare_progress_arrow.svg" />
+				<span className="text-green text-3xl">{cost}</span>
+			</div>
+		</div>
+	);
+}
+
+function Comparison() {
+	return (
+		<section className="min-h-screen flex flex-col gap-10">
+			<div className="grid grid-cols-1 md:grid-cols-2">
+				<SubHeading>Lower costs can add up to big savings</SubHeading>
+				<img src="/lower_cost.svg" />
+			</div>
+			<div className="flex flex-col gap-5">
+				<ComparisonProgress label={"Innicement"} width={"w-8/12"} cost={"$87,980"} />
+				<ComparisonProgress width={"w-7/12"} label={"Average InvestmentFirm"} cost={"$77,980"} />
+			</div>
+		</section>
+	);
+}
+
 function App() {
 	return (
 		<Layout className="container flex flex-col gap-10">
 			<Hero />
 			<Info />
 			<Pricing />
-			<section className="min-h-screen bg-red">
-				<SubHeading>Lower costs can add up to big savings</SubHeading>
-			</section>
+			<Comparison />
+
 			<section className="min-h-screen">
 				<div>
 					<SubHeading>Innicement Digital Advisor</SubHeading>
