@@ -9,14 +9,19 @@ function PricingItem({
 }: React.ComponentPropsWithoutRef<"div"> & { premium?: boolean }) {
 	return (
 		<div className={clsx(premium && "i-bg-gray premium-price")}>
-			<h4 className="price-label text-2xl border-3 border-black px-1 py-2">{title}</h4>
+			<h4 className="price-label text-3xl border-3 border-black px-8 py-2">
+				<div>Innicement -</div>
+				{title}
+			</h4>
 			<div className="px-4 py-8">
 				<p>
 					Personalized investing with insights, guidance and tools to confidently put your investing
 					ideas into action
 				</p>
-				<h3 className="price text-6xl bg-aaa my-8">$350</h3>
-				<span className="bg-blue">/ Minimum Investment</span>
+				<div className="my-8">
+					<h3 className="price text-6xl">$350</h3>
+					<span>/ Minimum Investment</span>
+				</div>
 				<NavButton>Try It For Free</NavButton>
 			</div>
 		</div>
@@ -25,10 +30,10 @@ function PricingItem({
 
 function PricingWrapper() {
 	return (
-		<div className="flex gap-8">
-			<PricingItem title="Innicement - Self‑Directed" />
-			<PricingItem title="Innicement - Guided Investing" premium />
-			<PricingItem title="Innicement - Guided Investing" />
+		<div className="flex flex-col md:flex-row gap-8">
+			<PricingItem title="Self‑Directed" />
+			<PricingItem title="Guided Investing" premium />
+			<PricingItem title="Guided Investing" />
 		</div>
 	);
 }
