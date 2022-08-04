@@ -89,8 +89,8 @@ function Circle({
 
 function Circles() {
 	return (
-		<div className="w-[60vh] h-[60vh] flex justify-center m-auto" style={{ perspective: "500px" }}>
-			<Circle className={"rotateX-90"} rotate={70}>
+		<div className="w-[60vh] h-[60vh] flex justify-center m-auto" style={{ perspective: "50rem" }}>
+			<Circle rotate={70}>
 				<Circle>
 					<Circle rotate={0}></Circle>
 				</Circle>

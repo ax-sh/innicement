@@ -16,3 +16,20 @@
 		@apply text-green;
 	}
 }
+
+.solar {
+	position: relative;
+	transform-style: preserve-3d;
+	// perspective: "50rem";
+	&:before {
+		position: absolute;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		content: "";
+		height: 30px;
+		width: 30px;
+		background-color: red;
+		transform: rotateX(-50deg);
+		display: inline-block;
+	}
+}
