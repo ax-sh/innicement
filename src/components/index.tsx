@@ -7,16 +7,25 @@ export function range(size: number, startAt = 1) {
   return Array.from(Array(size).keys()).map((i) => i + startAt);
 }
 
-export function Logo({ children }: React.ComponentPropsWithoutRef<"figure">) {
+export function Logo({
+  children,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<"figure">) {
   return (
-    <figure>
-      <img src="/Innicement.svg" />
+    <figure
+      className={clsx(className, "flex justify-center items-center")}
+      {...props}
+    >
+      <img src="/Innicement.svg" className="h-full" />
       {children && <caption>{children}</caption>}
     </figure>
   );
 }
 export function LogoWithText() {
-  return <Logo>Innicement</Logo>;
+  return (
+    <Logo className="h-10 overflow-hidden text-3xl lowercase">Innicement</Logo>
+  );
 }
 
 export function List({

@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { List, Logo, navItems } from "..";
+import { List, Logo, LogoWithText, navItems } from "..";
 
 function AuthButtonWrapper() {
   return (
@@ -23,7 +23,7 @@ export default function Nav() {
         "justify-between items-center"
       )}
     >
-      <Logo />
+      <LogoWithText />
       <List
         className={clsx(
           "flex",
