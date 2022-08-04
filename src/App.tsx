@@ -45,13 +45,13 @@ function PricingItem({
 }: React.ComponentPropsWithoutRef<"div"> & { premium?: boolean }) {
 	return (
 		<div className={clsx(premium && "i-bg-gray premium-price")}>
-			<h4 className="text-2xl border-3 border-black px-1 py-2">{title}</h4>
+			<h4 className="price-label text-2xl border-3 border-black px-1 py-2">{title}</h4>
 			<div className="px-4 py-8">
 				<p>
 					Personalized investing with insights, guidance and tools to confidently put your investing
 					ideas into action
 				</p>
-				<h3 className="price text-6xl bg-igreen my-8">$350</h3>
+				<h3 className="price text-6xl bg-aaa my-8">$350</h3>
 				<span className="bg-blue">/ Minimum Investment</span>
 				<NavButton>Try It For Free</NavButton>
 			</div>
@@ -71,10 +71,10 @@ function PricingWrapper() {
 
 function Pricing() {
 	return (
-		<section id="pricing" className="min-h-screen  bg-light-600 p-8">
-			<div className="flex justify-between">
+		<section id="pricing" className="min-h-screen bg-light-600 p-8 flex flex-col gap-8">
+			<div className="flex justify-between items-center gap-8">
 				<SubHeading>Invest your way</SubHeading>
-				<div className="h-4 bg-black" />
+				<div className="h-1 flex-grow bg-black " />
 				<NavButton>See Details</NavButton>
 			</div>
 			<PricingWrapper />
@@ -88,7 +88,7 @@ function App() {
 			<Hero />
 			<Info />
 			<Pricing />
-			<section className="min-h-screen">
+			<section className="min-h-screen bg-red">
 				<SubHeading>Lower costs can add up to big savings</SubHeading>
 			</section>
 			<section className="min-h-screen">

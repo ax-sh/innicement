@@ -9,7 +9,10 @@
 
 .premium-price {
 	color: white;
+	.price-label {
+		@apply bg-blue border-blue;
+	}
 	.price {
-		@apply text-[#12EBCA];
+		@apply text-green;
 	}
 }

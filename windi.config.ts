@@ -28,9 +28,12 @@ export default defineConfig({
 			"2xl": 7680,
 		},
 		// colors: { blue: "#f00" },
-		// extend: {
-		// 	colors: { blue: colors.sky, red: colors.rose, pink: colors.fuchsia },
-		// },
+		extend: {
+			colors: {
+				green: "#12EBCA",
+				blue: "#2F5EBF",
+			},
+		},
 	},
 	plugins: [require("tailwindcss-unsplash")],
 });
