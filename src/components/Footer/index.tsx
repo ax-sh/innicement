@@ -13,23 +13,23 @@ const extra = ["Why Innicement", "Fees & commissions", "Benefits", "Account conv
 
 function FooterLinks() {
 	return (
-		<div className={clsx("flex flex-grow", "gap-2", "justify-between")}>
-			<List className="flex flex-col gap-5">
+		<div className={clsx("grid flex-grow", "gap-6", "grid-cols-4")}>
+			<List className="col-span-2  md:col-span-1 flex flex-col gap-5">
 				{navItems.map((i) => (
 					<a>{i}</a>
 				))}
 			</List>
-			<List className="flex flex-col gap-5">
+			<List className="col-span-2  md:col-span-1 flex flex-col gap-5">
 				{services.map((i) => (
 					<a>{i}</a>
 				))}
 			</List>
-			<List className="flex flex-col gap-5">
+			<List className="col-span-4 md:col-span-1 flex flex-col gap-5">
 				{extra.map((i) => (
 					<a>{i}</a>
 				))}
 			</List>
-			<div></div>
+			{/* <div></div> */}
 		</div>
 	);
 }
