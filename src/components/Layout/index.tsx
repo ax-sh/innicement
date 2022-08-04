@@ -3,11 +3,12 @@ import Nav from "../Nav";
 
 export default function Layout({
   children,
+  ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
     <>
       <Nav />
-      <main>{children}</main>
+      <main {...props}>{children}</main>
       {/* <Footer /> */}
     </>
   );

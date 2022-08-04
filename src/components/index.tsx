@@ -7,6 +7,18 @@ export function range(size: number, startAt = 1) {
   return Array.from(Array(size).keys()).map((i) => i + startAt);
 }
 
+export function Logo({ children }: React.ComponentPropsWithoutRef<"figure">) {
+  return (
+    <figure>
+      LOGO
+      {children && <caption>{children}</caption>}
+    </figure>
+  );
+}
+export function LogoWithText() {
+  return <Logo>Innicement</Logo>;
+}
+
 export function List({
   children,
   className,
