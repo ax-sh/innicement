@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import React from "react";
 import "./App.scss";
 import { SubHeading } from "./components";
 import Layout from "./components/Layout";
@@ -27,7 +26,7 @@ function Hero() {
         className={clsx("col-span-6", "grid grid-cols-2 grid-rows-1", "gap-8")}
       >
         <div className="flex flex-col col-span-1 gap-12">
-          <img className="flex-grow" />
+          <img className="flex-grow" src="http://source.unsplash.com/random" />
           <p>
             Get helpful investing ideas and a cash bonus when you invest in a
             new account with Innicement
@@ -38,7 +37,7 @@ function Hero() {
             Get helpful investing ideas and a cash bonus when you invest in a
             new account with Innicement
           </p>
-          <img className="flex-grow" />
+          <img className="flex-grow" src="http://source.unsplash.com/random" />
         </div>
       </div>
     </section>
@@ -47,8 +46,31 @@ function Hero() {
 
 function Info() {
   return (
-    <section id="info" className="min-h-screen">
-      <SubHeading>Everything you need to invest the way you want</SubHeading>
+    <section id="info" className="min-h-screen grid grid-cols-12 gap-8">
+      <div className="col-span-3">
+        <img src="http://source.unsplash.com/random" />
+      </div>
+      <div className="col-span-6">
+        <SubHeading>Everything you need to invest the way you want</SubHeading>
+        <details>
+          <summary>Investing ideas</summary>
+          <p>
+            Innicement has the guidance and tools to confidently pursue your
+            investing goals and build your portfolio.
+          </p>
+        </details>
+
+        <details>
+          <summary>$0 trades</summary>
+        </details>
+        <details>
+          <summary>More rewards</summary>
+        </details>
+        <details>
+          <summary>Investing & connected</summary>
+        </details>
+      </div>
+      <div className="col-span-3"></div>
     </section>
   );
 }
