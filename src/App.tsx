@@ -10,9 +10,9 @@ import Pricing from "./container/Pricing";
 
 function Info() {
 	return (
-		<section id="info" className="min-h-screen grid grid-cols-12 gap-8">
+		<section id="info" className="grid grid-cols-12 gap-8">
 			<div className="col-span-3">
-				<img src="http://source.unsplash.com/random" />
+				<img src="http://source.unsplash.com/z1d-LP8sjuI" />
 			</div>
 			<div className="col-span-full md:col-span-6 flex flex-col gap-4">
 				<SubHeading>Everything you need to invest the way you want</SubHeading>
@@ -28,9 +28,9 @@ function Info() {
 					<Summary title="Investing & connected">lorem</Summary>
 				</div>
 			</div>
-			<div className="col-span-3 flex flex-col overflow-hidden">
-				<img src="http://source.unsplash.com/random" />
-				<img src="http://source.unsplash.com/random" />
+			<div className="col-span-3 flex flex-col overflow-hidden gap-2">
+				<img src="http://source.unsplash.com/ukzHlkoz1IE" />
+				<img src="http://source.unsplash.com/E4HksMblrdU" />
 			</div>
 		</section>
 	);
@@ -83,8 +83,8 @@ function App() {
 
 			<section className=" grid grid-cols-2 gap-4">
 				<div className="grid grid-cols-2 gap-4">
-					<img src="http://source.unsplash.com/random" />
-					<img src="http://source.unsplash.com/random" />
+					<img src="http://source.unsplash.com/ztYmIQecyH4" />
+					<img src="http://source.unsplash.com/JpflvzEl5cg" />
 				</div>
 				<div className="flex flex-col gap-8">
 					<SubHeading>Innicement Digital Advisor</SubHeading>
@@ -97,8 +97,8 @@ function App() {
 					<NavButton>Learn More</NavButton>
 				</div>
 			</section>
-			<section className="">
-				<div className="w-1/2 flex flex-col gap-5">
+			<section className="flex flex-col md:flex-row gap-4">
+				<div className="md:w-1/2 flex flex-col gap-5">
 					<SubHeading>Preferred Rewards</SubHeading>
 					<p>
 						Investment balances can help you earn Preferred Rewards benefits and pricing discounts.
@@ -107,14 +107,15 @@ function App() {
 					</p>
 					<NavButton>Learn More</NavButton>
 				</div>
+				<img className="md:w-1/2" src="http://source.unsplash.com/glY0yf3lxA4" />
 				{/* <Circles /> */}
 			</section>
-			<section className="get-started grid place-items-center">
+			<section className="get-started grid place-items-center py-6">
 				<div className="flex flex-col gap-10 items-start p-20">
 					<SubHeading>
 						<div>Get up </div>
 						<div>to when you invest in</div>
-						<strong>Innicement</strong>
+						<strong className="highlight">Innicement</strong>
 					</SubHeading>
 					<GetStartedButton />
 				</div>
