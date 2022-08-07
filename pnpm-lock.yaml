@@ -15,6 +15,7 @@ specifiers:
   pretty-quick: ^3.1.3
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-icons: ^4.4.0
   sass: ^1.54.2
   tailwindcss-unsplash: ^1.1.1
   ts-node: ^10.9.1
@@ -40,6 +41,7 @@ devDependencies:
   husky: 8.0.1
   prettier: 2.7.1
   pretty-quick: 3.1.3_prettier@2.7.1
+  react-icons: 4.4.0_react@18.2.0
   sass: 1.54.2
   tailwindcss-unsplash: 1.1.1
   ts-node: 10.9.1_e2tlcjkk7tlngjdlhzx5hjlnv4
@@ -2438,7 +2440,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lru-cache/6.0.0:
     resolution:
@@ -2946,6 +2947,17 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-icons/4.4.0_react@18.2.0:
+    resolution:
+      {
+        integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==,
+      }
+    peerDependencies:
+      react: "*"
+    dependencies:
+      react: 18.2.0
+    dev: true
+
   /react-refresh/0.14.0:
     resolution:
       {
@@ -2962,7 +2974,6 @@ packages:
     engines: { node: ">=0.10.0" }
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-pkg-up/7.0.1:
     resolution:
