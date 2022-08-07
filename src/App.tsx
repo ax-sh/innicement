@@ -47,15 +47,12 @@ function ComparisonProgress({
 }) {
 	return (
 		<div className="ComparisonProgress border-3 text-white w-full">
-			<div
-				className={clsx(
-					width,
-					"flex justify-between items-center bg-black gap-8 p-2 overflow-hidden"
-				)}
-			>
-				<span className="text-3xl">{label}</span>
-				<img className="flex-grow h-10 object-stretch" src="compare_progress_arrow.svg" />
-				<span className="text-green text-3xl">{cost}</span>
+			<div className={clsx(width, "bg-black gap-8 p-2 overflow-hidden")}>
+				<div className="flex justify-between items-center flex-wrap">
+					<span className="text-3xl">{label}</span>
+					<img className="flex-grow h-10 object-stretch" src="compare_progress_arrow.svg" />
+					<span className="text-green text-3xl">{cost}</span>
+				</div>
 			</div>
 		</div>
 	);
