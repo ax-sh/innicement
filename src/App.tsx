@@ -114,7 +114,7 @@ function App() {
 					<SubHeading>
 						<div>Get up </div>
 						<div>to when you invest in</div>
-						<h6>Innicement</h6>
+						<strong>Innicement</strong>
 					</SubHeading>
 					<GetStartedButton />
 				</div>
