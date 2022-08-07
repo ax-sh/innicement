@@ -1,5 +1,11 @@
 import clsx from "clsx";
 import { List, LogoWithText, navItems } from "..";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { MdAlternateEmail } from "react-icons/md";
+import { ImReddit } from "react-icons/im";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { RiFacebookFill } from "react-icons/ri";
+import React from "react";
 
 const services = [
 	"Compare Services",
@@ -34,15 +40,31 @@ function FooterLinks() {
 	);
 }
 
+function IconWrapper({ children }: React.ComponentPropsWithoutRef<"div">) {
+	return <div className="border-2 rounded-full p-3 grid place-content-center">{children}</div>;
+}
+
 function Social() {
 	return (
 		<List className="flex gap-3 pt-10">
-			<div className="border-2 rounded-full h-15 w-15" />
-			<div className="border-2 rounded-full h-15 w-15" />
-			<div className="border-2 rounded-full h-15 w-15" />
-			<div className="border-2 rounded-full h-15 w-15" />
-			<div className="border-2 rounded-full h-15 w-15" />
-			<div className="border-2 rounded-full h-15 w-15" />
+			<IconWrapper>
+				<RiFacebookFill size={30} />
+			</IconWrapper>
+			<IconWrapper>
+				<BsInstagram size={30} />
+			</IconWrapper>
+			<IconWrapper>
+				<BsLinkedin size={30} />
+			</IconWrapper>
+			<IconWrapper>
+				<AiOutlineTwitter size={30} />
+			</IconWrapper>
+			<IconWrapper>
+				<ImReddit size={30} />
+			</IconWrapper>
+			<IconWrapper>
+				<MdAlternateEmail size={30} />
+			</IconWrapper>
 		</List>
 	);
 }
