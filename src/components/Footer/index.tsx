@@ -21,18 +21,24 @@ function FooterLinks() {
 	return (
 		<div className={clsx("grid flex-grow", "gap-6", "grid-cols-4")}>
 			<List className="col-span-2  md:col-span-1 flex flex-col gap-5">
-				{navItems.map((i) => (
-					<a>{i}</a>
+				{navItems.map((i, index) => (
+					<a className="cursor-pointer" key={index}>
+						{i}
+					</a>
 				))}
 			</List>
 			<List className="col-span-2  md:col-span-1 flex flex-col gap-5">
-				{services.map((i) => (
-					<a>{i}</a>
+				{services.map((i, index) => (
+					<a className="cursor-pointer" key={index}>
+						{i}
+					</a>
 				))}
 			</List>
 			<List className="col-span-4 md:col-span-1 flex flex-col gap-5">
-				{extra.map((i) => (
-					<a>{i}</a>
+				{extra.map((i, index) => (
+					<a className="cursor-pointer" key={index}>
+						{i}
+					</a>
 				))}
 			</List>
 			{/* <div></div> */}
@@ -41,7 +47,11 @@ function FooterLinks() {
 }
 
 function IconWrapper({ children }: React.ComponentPropsWithoutRef<"div">) {
-	return <div className="border-2 rounded-full p-3 grid place-content-center">{children}</div>;
+	return (
+		<div className="border-2 rounded-full p-3 grid place-content-center cursor-pointer">
+			{children}
+		</div>
+	);
 }
 
 function Social() {
