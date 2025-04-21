@@ -17,6 +17,8 @@ component-based architecture for maintainability and scalability.
 - React Router for navigation
 - Modern styling with WindiCSS and SASS
 - Responsive design
+- Robust error handling with React Error Boundary
+- Consistent layout with reusable components
 
 ## Technologies
 
@@ -28,6 +30,7 @@ component-based architecture for maintainability and scalability.
 - **Package Manager**: Bun
 - **Linting & Formatting**: ESLint 9.25.0, Prettier 3.5.3
 - **Deployment**: GitHub Pages
+- **Error Handling**: React Error Boundary 5.0.0
 
 ## Getting Started
 
@@ -64,3 +67,5 @@ component-based architecture for maintainability and scalability.
 - `bun run deploy` - Deploy to GitHub Pages
 - `bun run lint` - Run ESLint
 - `bun run lint:fix` - Fix ESLint issues
+
+## Project Structure
