@@ -30,7 +30,7 @@ function PricingItem({
 
 function PricingWrapper() {
   return (
-    <div className="flex flex-col md:flex-row gap-8">
+    <div className="flex flex-col xl:flex-row gap-8">
       <PricingItem title="Self‑Directed" />
       <PricingItem title="Guided Investing" premium />
       <PricingItem title="Guided Investing" />
