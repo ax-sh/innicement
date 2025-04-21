@@ -1,15 +1,18 @@
-import { clsx } from "clsx";
-import React from "react";
-import { List, LogoWithText, navItems } from "..";
+import { clsx } from 'clsx';
+import React from 'react';
+import { List } from '..';
+import { LogoWithTextAndLink } from '../logo';
+import { navItems } from './constants';
 
 export function NavButton({
   className,
   children,
   ...props
-}: React.ComponentPropsWithoutRef<"button">) {
+}: React.ComponentPropsWithoutRef<'button'>) {
   return (
     <button
-      className={clsx(className, "border border-black p-4 px-6")}
+      type="button"
+      className={clsx(className, 'border border-black p-4 px-6')}
       {...props}
     >
       {children}
@@ -20,10 +23,10 @@ export function NavButton({
 export function GetStartedButton({
   className,
   ...props
-}: React.ComponentPropsWithoutRef<"button">) {
+}: React.ComponentPropsWithoutRef<'button'>) {
   return (
     <NavButton
-      className={clsx("bg-[#2F5EBF] text-white", className)}
+      className={clsx('bg-[#2F5EBF] text-white', className)}
       {...props}
     >
       <strong>Get Started</strong>
@@ -44,23 +47,27 @@ export default function Nav() {
   return (
     <nav
       className={clsx(
-        "container",
-        "flex md:flex-row flex-col",
-        "gap-2",
-        "py-10",
-        "justify-between items-center"
+        'container',
+        'flex md:flex-row flex-col',
+        'gap-2',
+        'py-10',
+        'justify-between items-center',
       )}
     >
-      <LogoWithText />
+      <LogoWithTextAndLink />
       <List
         className={clsx(
-          "flex",
+          'flex',
           //  "flex-grow justify-evenly",
-          "gap-2"
+          'gap-2',
         )}
       >
-        {navItems.map((i, index) => (
-          <a className="cursor-pointer" key={index}>
+        {navItems.map(i => (
+          <a
+            className="cursor-pointer font-medium hover:font-bold"
+            key={`nav-${i}`}
+            href={`#${i}`}
+          >
             {i}
           </a>
         ))}

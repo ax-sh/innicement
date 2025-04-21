@@ -1,13 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "virtual:windi.css";
-import "virtual:windi-devtools";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import App from "./App";
-import "./index.css";
+import { HashRouter } from 'react-router-dom';
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+import 'virtual:windi.css';
+
+import 'virtual:windi-devtools';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <HashRouter basename="/">
+      <App />
+    </HashRouter>
+  </React.StrictMode>,
 );

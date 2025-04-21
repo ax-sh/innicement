@@ -1,9 +1,10 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import WindiCSS from "vite-plugin-windicss";
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import Pages from 'vite-plugin-pages';
+import WindiCSS from 'vite-plugin-windicss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "https://ax-sh.github.io/innicement/",
-	plugins: [WindiCSS(), react()],
+  base: '/innicement/',
+  plugins: [WindiCSS(), react(), Pages()],
 });
