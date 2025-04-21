@@ -6,7 +6,7 @@ import { ImReddit } from 'react-icons/im';
 import { MdAlternateEmail } from 'react-icons/md';
 import { RiFacebookFill } from 'react-icons/ri';
 import { List } from '..';
-import { extra, navItems, services } from '../constants';
+import { extra, navItems, services } from '../Nav/constants';
 import { LogoWithTextAndLink } from '../logo';
 
 function FooterLinks() {
