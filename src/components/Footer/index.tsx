@@ -20,31 +20,31 @@ const extra = ['Why Innicement', 'Fees & commissions', 'Benefits', 'Account conv
 
 function FooterLinks() {
   return (
-		<div className={clsx("grid flex-grow", "gap-6", "grid-cols-4")}>
-			<List className="col-span-2  md:col-span-1 flex flex-col gap-5">
-				{navItems.map((i) => (
-					<a className="cursor-pointer" key={`footer-${i}`} href={`#${i}`}>
-						{i}
-					</a>
-				))}
-			</List>
-			<List className="col-span-2  md:col-span-1 flex flex-col gap-5">
-				{services.map((i, index) => (
-					<a className="cursor-pointer" key={index}>
-						{i}
-					</a>
-				))}
-			</List>
-			<List className="col-span-4 md:col-span-1 flex flex-col gap-5">
-				{extra.map((i, index) => (
-					<a className="cursor-pointer" key={index}>
-						{i}
-					</a>
-				))}
-			</List>
-			{/* <div></div> */}
-		</div>
-	);
+    <div className={clsx('grid flex-grow', 'gap-6', 'grid-cols-4')}>
+      <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
+        {navItems.map(i => (
+          <a className="cursor-pointer" key={`footer-${i}`} href={`#${i}`}>
+            {i}
+          </a>
+        ))}
+      </List>
+      <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
+        {services.map((i, index) => (
+          <a className="cursor-pointer" key={index}>
+            {i}
+          </a>
+        ))}
+      </List>
+      <List className="col-span-4 md:col-span-1 flex flex-col gap-5">
+        {extra.map((i, index) => (
+          <a className="cursor-pointer" key={index}>
+            {i}
+          </a>
+        ))}
+      </List>
+      {/* <div></div> */}
+    </div>
+  );
 }
 
 function IconWrapper({ children }: React.ComponentPropsWithoutRef<'div'>) {

@@ -9,7 +9,7 @@ export function Logo({ children, className, ...props }: React.ComponentPropsWith
   return (
     <figure className={clsx(className, 'flex justify-center items-center')} {...props}>
       <img alt="logo" src="./Innicement.svg" className="h-full" />
-      {!!children && <figcaption>{children}</figcaption>}
+      {Boolean(children) && <figcaption>{children}</figcaption>}
     </figure>
   );
 }
