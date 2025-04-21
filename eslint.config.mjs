@@ -8,6 +8,8 @@ const globalConfig = {
     'ts/no-misused-promises': ['off'],
     'ts/restrict-template-expressions': ['off'],
     'no-console': ['warn', { allow: ['table', 'debug', 'warn', 'error'] }],
+    'react/no-children-map': 'off',
+    'react/no-array-index-key': ['warn'],
   },
 };
 export default antfu(

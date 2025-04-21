@@ -1,10 +1,11 @@
+import type { ComponentPropsWithoutRef } from 'react';
 import Footer from '../Footer';
 import Nav from '../Nav';
 
 export default function Layout({
   children,
   ...props
-}: React.ComponentPropsWithoutRef<'div'>) {
+}: ComponentPropsWithoutRef<'div'>) {
   return (
     <>
       <Nav />

@@ -17,6 +17,32 @@ export function LogoWithText() {
   return <Logo className="h-10 overflow-hidden text-3xl lowercase">Innicement</Logo>;
 }
 
+// export function List({ children, className, ...props }: React.ComponentPropsWithoutRef<'ul'>) {
+// 	return (
+// 		<ul className={clsx('list', className)} {...props}>
+// 			{React.Children.map(children, (child) => {
+// 				if (React.isValidElement(child) && child.props.id) {
+// 					return <li key={child.props.id}>{child}</li>;
+// 				}
+// 				return null; // or handle the case where the child does not have an id
+// 			})}
+// 		</ul>
+// 	);
+// }
+
+// import { v4 as uuidv4 } from 'uuid';
+//
+// export function List({ children, className, ...props }: React.ComponentPropsWithoutRef<'ul'>) {
+// 	return (
+// 		<ul className={clsx('list', className)} {...props}>
+// 			{React.Children.map(children, (child) => {
+// 				const key = uuidv4(); // Generate a unique key for each child
+// 				return <li key={key}>{child}</li>;
+// 			})}
+// 		</ul>
+// 	);
+// }
+
 export function List({ children, className, ...props }: React.ComponentPropsWithoutRef<'ul'>) {
   return (
     <ul className={clsx('list', className)} {...props}>

@@ -1,5 +1,18 @@
+import { useParams } from 'react-router';
 import { FillViewPort } from '../components/fill-view-port';
+import Layout from '../components/Layout';
 
 export default function All() {
-  return <FillViewPort className="bg-red-500">404</FillViewPort>
+  const params = useParams();
+  const path = params['*'] ?? 'unknown'
+  return (
+    <Layout className="container flex flex-col gap-10">
+      <FillViewPort className="">
+        {' '}
+        {path}
+        {' '}
+        [404]
+      </FillViewPort>
+    </Layout>
+  )
 }
