@@ -5,7 +5,8 @@ import { BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { ImReddit } from 'react-icons/im';
 import { MdAlternateEmail } from 'react-icons/md';
 import { RiFacebookFill } from 'react-icons/ri';
-import { List, LogoWithText, navItems } from '..';
+import { List, LogoWithText } from '..';
+import { navItems } from '../constants';
 
 const services = [
   'Compare Services',
@@ -22,7 +23,7 @@ function FooterLinks() {
     <div className={clsx('grid flex-grow', 'gap-6', 'grid-cols-4')}>
       <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
         {navItems.map((i, index) => (
-          <a className="cursor-pointer" key={index} href={`#${i}`}>
+          <a className="cursor-pointer" key={i} href={`#${i}`}>
             {i}
           </a>
         ))}

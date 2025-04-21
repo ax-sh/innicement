@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
 import React from 'react';
-import { List, LogoWithText, navItems } from '..';
+import { List, LogoWithText } from '..';
+import { navItems } from '../constants';
 
 export function NavButton({
   className,
@@ -9,6 +10,7 @@ export function NavButton({
 }: React.ComponentPropsWithoutRef<'button'>) {
   return (
     <button
+      type="button"
       className={clsx(className, 'border border-black p-4 px-6')}
       {...props}
     >
@@ -59,8 +61,8 @@ export default function Nav() {
           'gap-2',
         )}
       >
-        {navItems.map((i, index) => (
-          <a className="cursor-pointer" key={index} href={`#${i}`}>
+        {navItems.map(i => (
+          <a className="cursor-pointer" key={`footer-${i}`} href={`#${i}`}>
             {i}
           </a>
         ))}

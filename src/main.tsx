@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-
+import { HashRouter } from 'react-router';
 import App from './App';
+
 import 'virtual:windi.css';
 
 import 'virtual:windi-devtools';
-
 import './index.css';
-import { HashRouter } from "react-router";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -17,4 +16,3 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </HashRouter>
   </React.StrictMode>,
 );
-

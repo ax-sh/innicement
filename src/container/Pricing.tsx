@@ -1,12 +1,12 @@
+import type { ComponentPropsWithoutRef } from 'react';
 import clsx from 'clsx';
 import { SubHeading } from '../components';
 import { NavButton } from '../components/Nav';
 
 function PricingItem({
   title,
-  children,
   premium,
-}: React.ComponentPropsWithoutRef<'div'> & { premium?: boolean }) {
+}: ComponentPropsWithoutRef<'div'> & { premium?: boolean }) {
   return (
     <div className={clsx(premium && 'i-bg-gray premium-price')}>
       <h4 className="price-label text-3xl border-3 border-black px-8 py-2">

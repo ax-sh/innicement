@@ -6,7 +6,7 @@ import { FillViewPort } from './components/fill-view-port';
 function Loader() {
   return (
     <FillViewPort>
-      <h1>innicement</h1>
+      <h1>Innicement</h1>
     </FillViewPort>
   );
 }
