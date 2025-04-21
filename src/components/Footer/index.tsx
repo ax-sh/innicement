@@ -22,7 +22,7 @@ function FooterLinks() {
     <div className={clsx('grid flex-grow', 'gap-6', 'grid-cols-4')}>
       <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
         {navItems.map((i, index) => (
-          <a className="cursor-pointer" key={index}>
+          <a className="cursor-pointer" key={index} href={`#${i}`}>
             {i}
           </a>
         ))}

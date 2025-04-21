@@ -60,7 +60,7 @@ export default function Nav() {
         )}
       >
         {navItems.map((i, index) => (
-          <a className="cursor-pointer" key={index}>
+          <a className="cursor-pointer" key={index} href={`#${i}`}>
             {i}
           </a>
         ))}
