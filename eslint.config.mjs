@@ -1,0 +1,27 @@
+// https://github.com/antfu/eslint-config
+import antfu from '@antfu/eslint-config'
+
+const globalConfig = {
+  rules: {
+    'style/semi': ['off', 'never'],
+    'toml/array-bracket-newline': 'off',
+    'ts/no-misused-promises': ['off'],
+    'ts/restrict-template-expressions': ['off'],
+    'no-console': ['warn', { allow: ['table', 'debug', 'warn', 'error'] }],
+  },
+};
+export default antfu(
+  {
+    type: 'app',
+    react: true,
+    test: true,
+    typescript: { tsconfigPath: 'tsconfig.json' },
+    // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
+    ignores: [
+      '**/fixtures',
+      // ...globs
+    ],
+  },
+  globalConfig,
+  {},
+)
