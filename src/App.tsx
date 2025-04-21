@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router';
 import routes from '~react-pages';
 import { FillViewPort } from './components/fill-view-port';
 import Layout from './components/Layout';
+import { AppErrorBoundary } from './components/Layout/error';
 
 function Loader() {
   return (
@@ -14,7 +15,7 @@ function Loader() {
   );
 }
 function App() {
-  return <Suspense fallback={<Loader />}>{useRoutes(routes)}</Suspense>;
+  return <AppErrorBoundary><Suspense fallback={<Loader />}>{useRoutes(routes)}</Suspense></AppErrorBoundary>;
 }
 
 export default App;
