@@ -6,7 +6,6 @@ export default function Layout({
   children,
   ...props
 }: ComponentPropsWithoutRef<'div'>) {
-	console.log(import.meta.env.VITE_BASE_URL,3322);
   return (
     <>
       <Nav />
