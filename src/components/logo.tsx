@@ -23,7 +23,7 @@ export function LogoWithText() {
 
 export function LogoWithTextAndLink() {
   return (
-    <a className="cursor-pointer" href="/">
+    <a className="cursor-pointer" href="./">
       <LogoWithText />
     </a>
   );
