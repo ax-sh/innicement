@@ -11,7 +11,7 @@ function Info() {
   return (
     <section id="info" className="grid grid-cols-12 gap-8">
       <div className="col-span-3">
-        <img src="http://source.unsplash.com/z1d-LP8sjuI" />
+        <img alt={"difficult roads lead to beautiful destinations"} src="./nik-z1d-LP8sjuI-unsplash.jpg" />
       </div>
       <div className="col-span-full md:col-span-6 flex flex-col gap-4">
         <SubHeading>Everything you need to invest the way you want</SubHeading>
@@ -28,8 +28,8 @@ function Info() {
         </div>
       </div>
       <div className="col-span-3 flex flex-col overflow-hidden gap-2">
-        <img src="http://source.unsplash.com/ukzHlkoz1IE" />
-        <img src="http://source.unsplash.com/E4HksMblrdU" />
+        <img alt={"sign"} src="./austin-chan-ukzHlkoz1IE-unsplash.jpg" />
+        <img alt={"telephone booth"} src="./marjan-blan-E4HksMblrdU-unsplash.jpg" />
       </div>
     </section>
   );
@@ -82,8 +82,8 @@ function App() {
 
       <section className=" grid grid-cols-2 gap-4">
         <div className="grid grid-cols-2 gap-4">
-          <img src="http://source.unsplash.com/ztYmIQecyH4" />
-          <img src="http://source.unsplash.com/JpflvzEl5cg" />
+          <img alt="stock graph" src="./tech-daily-ztYmIQecyH4-unsplash.jpg" />
+          <img alt={"stock market"} src="./dylan-calluy-JpflvzEl5cg-unsplash.png" />
         </div>
         <div className="flex flex-col gap-8">
           <SubHeading>Innicement Digital Advisor</SubHeading>
@@ -106,7 +106,7 @@ function App() {
           </p>
           <NavButton>Learn More</NavButton>
         </div>
-        <img className="md:w-1/2" src="http://source.unsplash.com/glY0yf3lxA4" />
+        <img className="md:w-1/2" src="./jeremy-bezanger-glY0yf3lxA4-unsplash-scaled.jpg" />
         {/* <Circles /> */}
       </section>
       <section className="get-started grid place-items-center py-6">

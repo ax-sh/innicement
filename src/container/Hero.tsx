@@ -11,7 +11,7 @@ export default function Hero() {
       </div>
       <div className={clsx('col-span-6', 'grid grid-cols-2 grid-rows-1', 'gap-8')}>
         <div className="flex flex-col col-span-1 gap-12">
-          <img className="flex-grow object-cover" src="./" />
+          <img alt={"money man"} className="flex-grow object-cover" src="./mathieu-stern-1zO4O3Z0UJA-unsplash.jpg" />
           <p>
             Get helpful investing ideas and a cash bonus when you invest in a new account with
             Innicement
@@ -19,7 +19,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-col gap-4">
           <div className="h-20 text-5xl">Innicement</div>
-          <img className="flex-grow object-cover" src="http://source.unsplash.com/OtfnlTw0lH4" />
+          <img alt={"money stack"} className="flex-grow object-cover" src="./matthew-lancaster-OtfnlTw0lH4-unsplash.jpg" />
         </div>
       </div>
     </section>
