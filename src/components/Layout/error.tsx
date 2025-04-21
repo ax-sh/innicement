@@ -1,14 +1,18 @@
 import type { PropsWithChildren } from 'react';
 import type { FallbackProps } from 'react-error-boundary/dist/declarations/src/types';
 import { ErrorBoundary } from 'react-error-boundary';
+import Layout from './index';
 
 function AppErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre>{error.message}</pre>
-      <button type="button" onClick={resetErrorBoundary}>Try again</button>
-    </div>
+    <Layout>
+
+      <div role="alert">
+        <p>Something went wrong:</p>
+        <pre>{error.message}</pre>
+        <button type="button" onClick={resetErrorBoundary}>Try again</button>
+      </div>
+    </Layout>
   );
 }
 

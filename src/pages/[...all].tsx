@@ -7,8 +7,7 @@ export default function All() {
   const path = params['*'] ?? 'unknown';
   return (
     <Layout className="container flex flex-col gap-10">
-      <FillViewPort className="">
-        {' '}
+      <FillViewPort>
         {path}
         {' '}
         [404]
