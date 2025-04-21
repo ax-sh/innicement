@@ -40,7 +40,7 @@ function PricingWrapper() {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="min-h-screen bg-light-600 p-8 flex flex-col gap-8">
+    <section id="pricing" className="min-h-[70dvh] bg-light-600 p-8 flex flex-col gap-8">
       <div className="flex justify-between items-center gap-8">
         <SubHeading>Invest your way</SubHeading>
         <div className="h-1 flex-grow bg-black " />

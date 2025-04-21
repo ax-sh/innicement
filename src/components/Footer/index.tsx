@@ -5,40 +5,32 @@ import { BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { ImReddit } from 'react-icons/im';
 import { MdAlternateEmail } from 'react-icons/md';
 import { RiFacebookFill } from 'react-icons/ri';
-import { List, LogoWithText } from '..';
-import { navItems } from '../constants';
-
-const services = [
-  'Compare Services',
-  'Investment Products',
-  'Account & Plans',
-  'Rollovers',
-  'Transfers',
-];
-
-const extra = ['Why Innicement', 'Fees & commissions', 'Benefits', 'Account conveniences'];
+import { List } from '..';
+import { extra, navItems, services } from '../constants';
+import { LogoWithTextAndLink } from '../logo';
 
 function FooterLinks() {
   return (
     <div className={clsx('grid flex-grow', 'gap-6', 'grid-cols-4')}>
       <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
         {navItems.map(i => (
-          <a className="cursor-pointer" key={`footer-${i}`} href={`#${i}`}>
+
+          <a className="cursor-pointer font-medium hover:font-bold" key={`footer-${i}`} href={`#${i}`}>
             {i}
           </a>
         ))}
       </List>
       <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
-        {services.map((i, index) => (
-          <a className="cursor-pointer" key={index}>
-            {i}
+        {services.map(({ id, label }) => (
+          <a className="cursor-pointer font-medium hover:font-bold" key={id}>
+            {label}
           </a>
         ))}
       </List>
       <List className="col-span-4 md:col-span-1 flex flex-col gap-5">
-        {extra.map((i, index) => (
-          <a className="cursor-pointer" key={index}>
-            {i}
+        {extra.map(({ id, label }) => (
+          <a className="cursor-pointer font-medium hover:font-bold" key={id}>
+            {label}
           </a>
         ))}
       </List>
@@ -86,7 +78,7 @@ export default function Footer() {
       <div
         className={clsx('container', 'flex flex-col md:flex-row', 'items-start', 'py-10', 'gap-5')}
       >
-        <LogoWithText />
+        <LogoWithTextAndLink />
         <div className="flex flex-col flex-grow">
           <FooterLinks />
           <Social />

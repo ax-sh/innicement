@@ -1,7 +1,8 @@
 import { clsx } from 'clsx';
 import React from 'react';
-import { List, LogoWithText } from '..';
+import { List } from '..';
 import { navItems } from '../constants';
+import { LogoWithTextAndLink } from '../logo';
 
 export function NavButton({
   className,
@@ -53,7 +54,7 @@ export default function Nav() {
         'justify-between items-center',
       )}
     >
-      <LogoWithText />
+      <LogoWithTextAndLink />
       <List
         className={clsx(
           'flex',
@@ -62,7 +63,7 @@ export default function Nav() {
         )}
       >
         {navItems.map(i => (
-          <a className="cursor-pointer" key={`footer-${i}`} href={`#${i}`}>
+          <a className="cursor-pointer font-medium hover:font-bold" key={`nav-${i}`} href={`#${i}`}>
             {i}
           </a>
         ))}

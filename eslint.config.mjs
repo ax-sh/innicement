@@ -10,6 +10,7 @@ const globalConfig = {
     'no-console': ['warn', { allow: ['table', 'debug', 'warn', 'error'] }],
     'react/no-children-map': 'off',
     'react/no-array-index-key': ['warn'],
+    'ts/no-require-imports': 'off',
   },
 };
 export default antfu(
