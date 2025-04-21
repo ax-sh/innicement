@@ -5,8 +5,7 @@ import Layout from './index';
 
 function AppErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   return (
-    <Layout>
-
+    <Layout className={'container'}>
       <div role="alert">
         <p>Something went wrong:</p>
         <pre>{error.message}</pre>
