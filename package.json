@@ -36,5 +36,6 @@
 		"vite": "^6.3.2",
 		"vite-plugin-windicss": "^1.9.4",
 		"windicss": "^3.5.6"
-	}
+	},
+	"packageManager": "bun@1.2.10"
 }
