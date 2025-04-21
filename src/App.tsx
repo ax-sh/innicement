@@ -1,16 +1,18 @@
-import { Suspense } from "react";
-import { useRoutes } from "react-router";
-import routes from "~react-pages";
-import  Home  from "./pages";
+import { Suspense } from 'react';
+import { useRoutes } from 'react-router';
+import routes from '~react-pages';
+import { FillViewPort } from './components/fill-view-port';
 
+function Loader() {
+  return (
+    <FillViewPort>
+      <h1>innicement</h1>
+    </FillViewPort>
+  );
+}
 function App() {
-	console.log(routes);
-	return <Home/>
-	// return (
-	// 	<Suspense fallback={<p>Loading...</p>}>
-	// 		{useRoutes(routes)}
-	// 	</Suspense>
-	// )
+  // return <Home/>
+  return <Suspense fallback={<Loader />}>{useRoutes(routes)}</Suspense>;
 }
 
 export default App;

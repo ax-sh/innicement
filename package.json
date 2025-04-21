@@ -9,8 +9,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "predeploy": "pnpm run build",
-    "deploy": "pnpm gh-pages -d dist",
+    "predeploy": "nr run build",
+    "deploy": "nr gh-pages -d dist",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
