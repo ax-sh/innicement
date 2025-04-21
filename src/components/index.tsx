@@ -5,7 +5,9 @@ export function SubHeading({ children }: React.ComponentPropsWithoutRef<'h2'>) {
   return <h2 className={clsx('*header-2')}>{children}</h2>;
 }
 
-export function List({ children, className, ...props }: React.ComponentPropsWithoutRef<'ul'>) {
+export function List(
+  { children, className, ...props }: React.ComponentPropsWithoutRef<'ul'>,
+) {
   return (
     <ul className={clsx('list', className)} {...props}>
       {React.Children.map(children, (child) => {
@@ -19,11 +21,17 @@ export function List({ children, className, ...props }: React.ComponentPropsWith
   );
 }
 
-export function Summary({ title, children }: React.ComponentPropsWithoutRef<'details'>) {
+export function Summary(
+  { title, children }: React.ComponentPropsWithoutRef<'details'>,
+) {
   return (
     <details>
-      <summary className="cursor-pointer text-3xl hover:bg-green">{title}</summary>
-      <div className="flex justify-end text-right children:w-6/12">{children}</div>
+      <summary className="cursor-pointer text-3xl hover:bg-green">
+        {title}
+      </summary>
+      <div className="flex justify-end text-right children:w-6/12">
+        {children}
+      </div>
     </details>
   );
 }

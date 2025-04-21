@@ -11,15 +11,18 @@ function Info() {
   return (
     <section id="info" className="grid grid-cols-12 gap-8">
       <div className="md:col-span-3 col-span-12">
-        <img alt="difficult roads lead to beautiful destinations" src="./nik-z1d-LP8sjuI-unsplash.jpg" />
+        <img
+          alt="difficult roads lead to beautiful destinations"
+          src="./nik-z1d-LP8sjuI-unsplash.jpg"
+        />
       </div>
       <div className="col-span-full md:col-span-6 flex flex-col gap-4">
         <SubHeading>Everything you need to invest the way you want</SubHeading>
         <div>
           <Summary title="Investing ideas">
             <p>
-              Innicement has the guidance and tools to confidently pursue your investing goals and
-              build your portfolio.
+              Innicement has the guidance and tools to confidently pursue your
+              investing goals and build your portfolio.
             </p>
           </Summary>
           <Summary title="$0 trades">lorem</Summary>
@@ -29,7 +32,10 @@ function Info() {
       </div>
       <div className="col-span-12 md:col-span-3 flex flex-col overflow-hidden gap-2">
         <img alt="sign" src="./austin-chan-ukzHlkoz1IE-unsplash.jpg" />
-        <img alt="telephone booth" src="./marjan-blan-E4HksMblrdU-unsplash.jpg" />
+        <img
+          alt="telephone booth"
+          src="./marjan-blan-E4HksMblrdU-unsplash.jpg"
+        />
       </div>
     </section>
   );
@@ -49,7 +55,10 @@ function ComparisonProgress({
       <div className={clsx(width, 'bg-black gap-8 p-2 overflow-hidden')}>
         <div className="flex justify-between items-center flex-wrap">
           <span className="text-3xl">{label}</span>
-          <img className="flex-grow h-10 object-stretch" src="compare_progress_arrow.svg" />
+          <img
+            className="flex-grow h-10 object-stretch"
+            src="compare_progress_arrow.svg"
+          />
           <span className="text-green text-3xl">{cost}</span>
         </div>
       </div>
@@ -66,7 +75,11 @@ function Comparison() {
       </div>
       <div className="flex flex-col gap-5 overflow-hidden">
         <ComparisonProgress label="Innicement" width="w-8/12" cost="$87,980" />
-        <ComparisonProgress width="w-7/12" label="Average InvestmentFirm" cost="$77,980" />
+        <ComparisonProgress
+          width="w-7/12"
+          label="Average InvestmentFirm"
+          cost="$77,980"
+        />
       </div>
     </section>
   );
@@ -83,14 +96,18 @@ export default function Home() {
       <section className=" grid grid-cols-2 gap-4">
         <div className="grid grid-cols-2 gap-4">
           <img alt="stock graph" src="./tech-daily-ztYmIQecyH4-unsplash.jpg" />
-          <img alt="stock market" src="./dylan-calluy-JpflvzEl5cg-unsplash.png" />
+          <img
+            alt="stock market"
+            src="./dylan-calluy-JpflvzEl5cg-unsplash.png"
+          />
         </div>
         <div className="flex flex-col gap-8">
           <SubHeading>Innicement Digital Advisor</SubHeading>
           <p>
-            For those who prefer the convenience of a robo-advisor, Innicement Digital Advisor will
-            build a customized portfolio and continue to optimize your investments over time. You
-            get the benefit of Innicement time-tested philosophy delivered on a modern, all-digital
+            For those who prefer the convenience of a robo-advisor, Innicement
+            Digital Advisor will build a customized portfolio and continue to
+            optimize your investments over time. You get the benefit of
+            Innicement time-tested philosophy delivered on a modern, all-digital
             platform that can evolve with your needs.
           </p>
           <NavButton>Learn More</NavButton>
@@ -100,19 +117,23 @@ export default function Home() {
         <div className="md:w-1/2 flex flex-col gap-5">
           <SubHeading>Preferred Rewards</SubHeading>
           <p>
-            Investment balances can help you earn Preferred Rewards benefits and pricing discounts.
-            Members enjoy program benefits including credit card rewards bonuses, discounts on home
-            and auto loans, monthly account maintenance fee waivers, and more.
+            Investment balances can help you earn Preferred Rewards benefits and
+            pricing discounts. Members enjoy program benefits including credit
+            card rewards bonuses, discounts on home and auto loans, monthly
+            account maintenance fee waivers, and more.
           </p>
           <NavButton>Learn More</NavButton>
         </div>
-        <img className="md:w-1/2" src="./jeremy-bezanger-glY0yf3lxA4-unsplash-scaled.jpg" />
+        <img
+          className="md:w-1/2"
+          src="./jeremy-bezanger-glY0yf3lxA4-unsplash-scaled.jpg"
+        />
         {/* <Circles /> */}
       </section>
       <section className="get-started grid place-items-center py-6">
         <div className="flex flex-col gap-10 items-start p-20">
           <SubHeading>
-            <div>Get up </div>
+            <div>Get up</div>
             <div>to when you invest in</div>
             <strong className="highlight">Innicement</strong>
           </SubHeading>

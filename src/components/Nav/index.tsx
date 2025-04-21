@@ -63,7 +63,11 @@ export default function Nav() {
         )}
       >
         {navItems.map(i => (
-          <a className="cursor-pointer font-medium hover:font-bold" key={`nav-${i}`} href={`#${i}`}>
+          <a
+            className="cursor-pointer font-medium hover:font-bold"
+            key={`nav-${i}`}
+            href={`#${i}`}
+          >
             {i}
           </a>
         ))}

@@ -15,8 +15,8 @@ function PricingItem({
       </h4>
       <div className="px-4 py-8">
         <p>
-          Personalized investing with insights, guidance and tools to confidently put your investing
-          ideas into action
+          Personalized investing with insights, guidance and tools to
+          confidently put your investing ideas into action
         </p>
         <div className="my-8">
           <h3 className="price text-6xl">$350</h3>
@@ -40,7 +40,10 @@ function PricingWrapper() {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="min-h-[70dvh] bg-light-600 p-8 flex flex-col gap-8">
+    <section
+      id="pricing"
+      className="min-h-[70dvh] bg-light-600 p-8 flex flex-col gap-8"
+    >
       <div className="flex justify-between items-center gap-8">
         <SubHeading>Invest your way</SubHeading>
         <div className="h-1 flex-grow bg-black " />

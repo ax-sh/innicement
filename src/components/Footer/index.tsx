@@ -14,8 +14,11 @@ function FooterLinks() {
     <div className={clsx('grid flex-grow', 'gap-6', 'grid-cols-4')}>
       <List className="col-span-2  md:col-span-1 flex flex-col gap-5">
         {navItems.map(i => (
-
-          <a className="cursor-pointer font-medium hover:font-bold" key={`footer-${i}`} href={`#${i}`}>
+          <a
+            className="cursor-pointer font-medium hover:font-bold"
+            key={`footer-${i}`}
+            href={`#${i}`}
+          >
             {i}
           </a>
         ))}
@@ -76,7 +79,13 @@ export default function Footer() {
   return (
     <footer>
       <div
-        className={clsx('container', 'flex flex-col md:flex-row', 'items-start', 'py-10', 'gap-5')}
+        className={clsx(
+          'container',
+          'flex flex-col md:flex-row',
+          'items-start',
+          'py-10',
+          'gap-5',
+        )}
       >
         <LogoWithTextAndLink />
         <div className="flex flex-col flex-grow">

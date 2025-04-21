@@ -1,6 +1,12 @@
 import { nanoid } from 'nanoid';
 
-export const navItems = ['Home', 'About', 'Investment', 'Services', 'News'] as const;
+export const navItems = [
+  'Home',
+  'About',
+  'Investment',
+  'Services',
+  'News',
+] as const;
 
 export const services = [
   'Compare Services',
@@ -8,6 +14,11 @@ export const services = [
   'Account & Plans',
   'Rollovers',
   'Transfers',
-].map(item => ({ id: nanoid(), label: item }))
+].map(item => ({ id: nanoid(), label: item }));
 
-export const extra = ['Why Innicement', 'Fees & commissions', 'Benefits', 'Account conveniences'].map(item => ({ id: nanoid(), label: item }))
+export const extra = [
+  'Why Innicement',
+  'Fees & commissions',
+  'Benefits',
+  'Account conveniences',
+].map(item => ({ id: nanoid(), label: item }));

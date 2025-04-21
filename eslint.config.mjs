@@ -1,5 +1,5 @@
 // https://github.com/antfu/eslint-config
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
 const globalConfig = {
   rules: {
@@ -27,4 +27,4 @@ export default antfu(
   },
   globalConfig,
   {},
-)
+);
