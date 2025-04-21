@@ -1,0 +1,1 @@
+import{u as e,j as a,L as n,F as r}from"./index-DLxI8zV9.js";function o(){const s=e()["*"]??"unknown";return a.jsx(n,{className:"container flex flex-col gap-10",children:a.jsxs(r,{className:"",children:[" ",s," ","[404]"]})})}export{o as default};
